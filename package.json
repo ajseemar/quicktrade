@@ -1,0 +1,22 @@
+{
+  "name": "quicktrade",
+  "version": "1.0.0",
+  "repository": "git@github.com:ajseemar/quicktrade.git",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server",
+    "shef-codegen"
+  ],
+  "scripts": {
+    "start-dev-db": "sh ./scripts/start_dev_db.sh",
+    "dev:api": "cd server && yarn start",
+    "dev:web": "cd client && yarn start",
+    "dev": "concurrently \"yarn dev:api\" \"yarn dev:web\""
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "lodash": "^4.17.15"
+  }
+}
